@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 
 
+
 public class D {
 	static Logger log=Logger.getLogger(D.class);
 	//public static enum myCounters {NUMBER_OF_ROWS,ROWS_LEFT} 
