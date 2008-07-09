@@ -73,9 +73,7 @@ public class InputMapper extends MapReduceBase implements Mapper<WritableCompara
 
 		conf.setNumReduceTasks(0);
 
-		//conf.setNumMapTasks(2);
 		try {
-			//JobClient client=new JobClient(conf);
 			JobClient.runJob(conf);
 		} catch (Exception e) {e.printStackTrace();
 
