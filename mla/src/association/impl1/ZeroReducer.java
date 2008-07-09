@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class ZeroReducer extends MapReduceBase implements
-Reducer<IntWritable, IntWritable, SetWritable, IntWritable> {
+Reducer<IntWritable, IntWritable, IntWritable, IntWritable> {
 
 	static Logger log=Logger.getLogger(ZeroReducer.class);
 
@@ -23,16 +23,16 @@ Reducer<IntWritable, IntWritable, SetWritable, IntWritable> {
 
 
 	public void reduce(IntWritable key, Iterator<IntWritable> values,
-			OutputCollector<SetWritable,IntWritable> output, Reporter reporter) throws IOException {
+			OutputCollector<IntWritable,IntWritable> output, Reporter reporter) throws IOException {
 		int sum=0;
 		while (values.hasNext()) {    	
 			sum+=values.next().get();
 		}
 		if(sum >= SUPPORT){
 		    reporter.incrCounter(Count.count.Items_LEFT , 1);
-		    SetWritable sw=new SetWritable();
-		    sw.add(key);
-			output.collect(sw, new IntWritable(sum));
+		    //SetWritable sw=new SetWritable();
+		    //sw.add(key);
+			output.collect(key, new IntWritable(sum));
 		}
 	}
 

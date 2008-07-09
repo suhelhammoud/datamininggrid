@@ -37,6 +37,8 @@ public class ItemMap extends TreeMap<SetWritable, Integer>{
 
 	public  static int SUPPORT;
 	public  static int ITERATION;
+	
+	private HashSet<Integer> atomics;
 
 	String freqDir;
 
@@ -230,6 +232,11 @@ public class ItemMap extends TreeMap<SetWritable, Integer>{
 	}
 
 
+	/**
+	 * 
+	 * @param srcPath
+	 * @return list of all directories under the srcPath directory
+	 */
 	public static List<Path> listAllPaths(Path srcPath){
 		List<Path> result=new ArrayList<Path>();
 		try {
@@ -250,6 +257,7 @@ public class ItemMap extends TreeMap<SetWritable, Integer>{
 		}
 		return result;
 	}
+	
 	public boolean load(String srcDir,JobConf job) {
 		//clear();
 		configure(job);
@@ -274,10 +282,13 @@ public class ItemMap extends TreeMap<SetWritable, Integer>{
 					
 					//TODO added this bit to map one single items
 					for (Integer itm : key) {
-						SetWritable aItem=new SetWritable();
-						aItem.add(itm);
-						if (containsKey(aItem))continue;
-						else put(aItem, -1);
+//						SetWritable aItem=new SetWritable();
+//						aItem.add(itm);
+//						if (containsKey(aItem))continue;
+//						else put(aItem, -1);
+						
+						if (atomics.contains(itm))continue;
+						else atomics.add(itm);
 					}
 
 				}
