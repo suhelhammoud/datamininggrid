@@ -51,7 +51,8 @@ public class D {
 		System.out.println("ZerroMapper ,"+D.toc(t)+", "+D.toc(t_start));
 
 		t=D.tic();
-		//RemoveNotFrequentMapper.runJob("data/input","data/input_removed",freqDir, param);
+		
+		// RemoveNotFrequentMapper.runJob("data/input","data/input_removed",freqDir, param);
 		//System.out.println("RemoveNotFrequentMapper ,"+D.toc(t)+", "+D.toc(t_start));
 
 		for(int i=2; ; i++){
