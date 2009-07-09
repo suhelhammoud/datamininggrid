@@ -59,24 +59,7 @@ public class ToFrequentItem extends MapReduceBase implements
 	
 	public static void main(String[] args) {
 		//initiaize data
-		DataBag dataReady=InitData.runJob();
-		for (Object i : dataReady) {
-			System.out.println(i);
-		}
 		
-
-		//one step in finding frequent items sets
-		
-		// map data to FrequentItem space
-		DataBag dataout=ToFrequentItem.runJob(dataReady,true);
-		
-		// map data to Line space
-		
-		
-		
-		for (Object i : dataout) {
-			System.out.println(i);
-		}
 	}
 
 }

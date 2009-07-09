@@ -42,6 +42,7 @@ public class MapReduceBase {
 			this.mprd=new DataBag();
 
 			mapper=(Mapper) job.getMapperClass().newInstance();
+			System.out.println("------------------------------------configure mapper----------------------");
 			((MapReduceBase)mapper).configure(job);
 			
 			mapCollector=new MyOutputCollector(mprd);
@@ -51,6 +52,7 @@ public class MapReduceBase {
 			if(cReduce!=null){
 				output=new DataBag();
 				reducer=(Reducer)job.getReducerClass().newInstance();
+				System.out.println("------------------------------------configure reducer-----------------------");
 				((MapReduceBase)reducer).configure(job);
 
 				reduceCollector=new MyOutputCollector(output);
@@ -96,7 +98,9 @@ public class MapReduceBase {
 			
 			KeyValue item=iter.next();
 			DataBag list=new DataBag();
+			list.add((V)item.value);
 
+				
 			while(iter.hasNext()){
 //				list.clear();
 //				list.add((V) item.value);
@@ -115,6 +119,9 @@ public class MapReduceBase {
 					list.add((V) item2.value);
 				}
 			};
+			if(job.verbose)
+				System.out.println(reducer.getClass().getName()
+						+".reduce("+item.key+" ,"+list+")");	
 			reducer.reduce(item.key, list.iterator(), reduceCollector, job);
 
 			if(job.verbose)System.out.println("------------------finshed reducing -------------------");

@@ -66,7 +66,7 @@ public class FrequentItem extends TreeMap<Integer, List<Integer>> {
 		return sb.toString();
 	}
 
-	public void add(int label, int line){
+	public void add(Integer label, int line){
 		List<Integer> list=get(label);
 		if(list==null){
 			list=new ArrayList<Integer>();
@@ -82,7 +82,7 @@ public class FrequentItem extends TreeMap<Integer, List<Integer>> {
 
 	}
 
-	public void addArray(int label, int... arr){
+	public void addArray(Integer label, int... arr){
 		List<Integer> list=get(label);
 		if(list==null){
 			list=new ArrayList<Integer>(arr.length);
@@ -106,7 +106,7 @@ public class FrequentItem extends TreeMap<Integer, List<Integer>> {
 		}
 	}
 
-	public void addList(int label,List<Integer> list) {
+	public void addList(Integer label,List<Integer> list) {
 		List<Integer> local=get(label);
 		if (local==null)
 			put(label, list);
@@ -159,20 +159,7 @@ public class FrequentItem extends TreeMap<Integer, List<Integer>> {
 
 	
 
-	public static void main(String[] args) {
-		FrequentItem map=new FrequentItem();
-		map.addArray(1,new int[]{1,2,3});
-		map.addArray(2,new int[]{221,22,23});
-
-		map.addArray(1, 4,5);
-		map.addArray(2,444,4444,4444);
-
-		System.out.println(map);
-		map.addArray(1,new int[]{5555551,255555,3});
-
-		System.out.println(map);
-
-	}
+	
 	public void setIsRule(boolean b) {
 		isRule=b;		
 	}

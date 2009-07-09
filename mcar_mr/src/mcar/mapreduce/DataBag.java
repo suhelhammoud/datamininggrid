@@ -9,6 +9,14 @@ public class DataBag extends ArrayList implements Comparable {
 		super();
 	}
 
+	public DataBag(DataBag dataBag) {
+		super(dataBag);
+	}
+
+	public DataBag(int i) {
+		super(i);
+	}
+
 	@Override
 	public int compareTo(Object o) {
 		DataBag other=(DataBag)o;

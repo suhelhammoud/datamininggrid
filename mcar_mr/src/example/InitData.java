@@ -19,8 +19,8 @@ public class InitData extends MapReduceBase implements
 		DataBag outvalue=new DataBag();
 		for (int i = 1; i < item.length; i++) {
 			DataBag v=new DataBag();
-			v.add(i);
-			v.add(item[i]);
+			v.add(i-1);
+			v.add(Integer.valueOf(item[i]));
 			outvalue.add(v);
 		}
 		output.collect(key, outvalue);
@@ -28,15 +28,15 @@ public class InitData extends MapReduceBase implements
 	}
 	
 	
-	public static DataBag runJob(){
+	public static DataBag runJob(String fileName){
 		JobConf job=new JobConf();
 		job.setMapperClass(InitData.class);
-		job.set_input("data/example.txt");
+		job.set_input(fileName);
 		return job.run();
 	}
 	
 	public static void main(String[] args) {
-		DataBag output=runJob();
+		DataBag output=runJob("data/example.txt");
 		for (Object item : output) {
 			System.out.println(item);
 		}
