@@ -15,8 +15,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import javax.servlet.jsp.tagext.Tag;
-import javax.xml.transform.Result;
+ import javax.xml.transform.Result;
 
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
