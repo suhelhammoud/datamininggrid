@@ -1,0 +1,19 @@
+//		Set<Integer> set1=new TreeSet<Integer>();
+	//
+	//		for (int i = 0,iii=size-len; i<=iii;  i++) {
+	//			int ri=1<<i;
+	//
+	//			for (int j = i+1, jjj=iii+1; j <=  jjj; j++) {
+	//				int rj=(1<<j | ri);
+	//
+	//				for (int k = j+1, kkk=jjj+1; k <= kkk; k++) {
+	//					int rk=1<<k | rj;
+	//
+	//					System.out.println(rk+"\t"+format(rk)+"\t"+Integer.bitCount(rk)+ "\t"+i+" "+j+" "+k);
+	//					if(! set1.add(rk))System.out.println("erro in "+i);;
+	//
+	//				}
+	//
+	//			}
+	//
+	//		}
