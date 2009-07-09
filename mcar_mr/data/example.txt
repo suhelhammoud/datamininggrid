@@ -1,0 +1,9 @@
+1,a,b,c,m
+2,c,b,c,m
+3,c,d,c,p
+4,c,d,c,r
+5,a,b,a,p
+6,a,d,a,r
+7,c,d,a,r
+8,c,b,d,r
+9,a,b,a,r
