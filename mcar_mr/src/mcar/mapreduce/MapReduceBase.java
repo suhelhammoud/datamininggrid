@@ -42,7 +42,8 @@ public class MapReduceBase {
 			this.mprd=new DataBag();
 
 			mapper=(Mapper) job.getMapperClass().newInstance();
-			System.out.println("------------------------------------configure mapper----------------------");
+			if(job.verbose)
+				System.out.println("\n------------------------------------configure mapper: "+job.getJobName()+"----------------------");
 			((MapReduceBase)mapper).configure(job);
 			
 			mapCollector=new MyOutputCollector(mprd);
@@ -52,7 +53,9 @@ public class MapReduceBase {
 			if(cReduce!=null){
 				output=new DataBag();
 				reducer=(Reducer)job.getReducerClass().newInstance();
-				System.out.println("------------------------------------configure reducer-----------------------");
+				mapper=(Mapper) job.getMapperClass().newInstance();
+				if(job.verbose)
+					System.out.println("\n------------------------------------configure reducer: "+job.getJobName()+"----------------------");
 				((MapReduceBase)reducer).configure(job);
 
 				reduceCollector=new MyOutputCollector(output);
@@ -71,7 +74,7 @@ public class MapReduceBase {
 	@SuppressWarnings("unchecked")
 	public <V> void run(){
 		MyOutputCollector.verbose=job.verbose;
-		if(job.verbose)System.out.println("\n------------------start mapping -------------------");
+		if(job.verbose)System.out.println("\n------------------------------------Start Mapping using "+job.getJobName()+" Mapper ------------------------------------");
 		
 		try {
 			for (Object ii : input) {
@@ -86,13 +89,15 @@ public class MapReduceBase {
 				
 			}
 			
-			if(job.verbose)System.out.println("------------------finished mapping -------------------");
+			if(job.verbose)System.out.println("------------------------------------Finished Mapping------------------------------------\n");
 			if(reducer==null){
 				return;
 			}
-			if(job.verbose)System.out.println("\n------------------start reducing -------------------");
+			if(job.verbose)System.out.println("\n------------------------------------Start Reducing using "+job.getJobName()+" Reducer ------------------------------------");
 
 			Collections.sort(mprd);
+			//un commented to see mprd before reducing
+			//for (Object k : mprd) System.out.println(k);
 			Iterator<KeyValue> iter=mprd.iterator();
 			if(!iter.hasNext())return;
 			
@@ -124,7 +129,7 @@ public class MapReduceBase {
 						+".reduce("+item.key+" ,"+list+")");	
 			reducer.reduce(item.key, list.iterator(), reduceCollector, job);
 
-			if(job.verbose)System.out.println("------------------finshed reducing -------------------");
+			if(job.verbose)System.out.println("------------------------------------Finished Reducing ------------------------------------\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

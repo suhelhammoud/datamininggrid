@@ -19,6 +19,6 @@ public class KeyValue implements Comparable{
 	
 	@Override
 	public String toString() {
-		return "<"+key.toString()+", "+value.toString()+">";
+		return "<"+key.toString()+", "+value.toString()+">\n";
 	}
 }

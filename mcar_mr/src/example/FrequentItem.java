@@ -1,9 +1,10 @@
 
 package example;
 
-import org.apache.log4j.Logger;
 
 import java.util.*;
+
+import mcar.mapreduce.Logger;
 
 //TODO change to HashMap later
 public class FrequentItem extends TreeMap<Integer, List<Integer>> {
