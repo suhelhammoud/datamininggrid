@@ -1,0 +1,12 @@
+{
+
+	"maxSplitSize":1000.00,
+	"maxIM":150,
+	"propDelay":2.0,
+	"heartbeat":1.0,
+
+	"map":{
+		"mapredTaskMaxvmem":100.00,
+		"someList":[1,2,4]
+	}
+}

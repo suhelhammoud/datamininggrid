@@ -1,0 +1,22 @@
+{
+	"jobName":"job_01",
+	
+	"numberOfMappers":2,
+	"numberOfReducers":1,
+	
+		
+	
+	
+	"inputSplits":[
+		{"id":"01", "location":"m1", "size":1000.00, "records":1000.0, "replica":["m1"]},
+		{"id":"02", "location":"m2", "size":1000.00, "records":1000.0}],
+		
+	"outputSplits":[],
+	
+	"algorithm":"alg_01",
+	
+	"useCombiner":true,
+	
+	"useCompression":false
+
+}

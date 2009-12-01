@@ -1,0 +1,21 @@
+{
+	"rack_01":{
+		"router":"r_01",
+		"machines":[["m1","machine_01"],
+					["m2","machine_01"],
+					["m3","machine_01"],
+					["m4","machine_01"],
+					["m5","machine_02"]
+					]
+	},
+	
+	"rack_02":{
+		"router":"r_02",
+		"machines":[["m6","machine_01"],
+					["m7","machine_01"],
+					["m8","machine_01"],
+					["m9","machine_01"],
+					["m10","machine_02"]
+					]
+	}
+}

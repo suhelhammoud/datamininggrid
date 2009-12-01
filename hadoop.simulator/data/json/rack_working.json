@@ -1,0 +1,35 @@
+{ "machines" : [ { "baudRate" : 400.0,
+            "cpu" : { "cores" : 4,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 40000.0,
+                "read" : 200.0,
+                "seekTime" : 1.0,
+                "write" : 100.0
+              },
+            "hostName" : "m1",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 4,
+            "maxReducer" : 2,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 200.0
+          },
+		{ "baudRate" : 400.0,
+            "cpu" : { "cores" : 3,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 40000.0,
+                "read" : 200.0,
+                "seekTime" : 1.0,
+                "write" : 100.0
+              },
+            "hostName" : "m2",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 3,
+            "maxReducer" : 1,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 200.0
+          }
+        ],
+      "router" : "r_01"
+    }

@@ -1,0 +1,11 @@
+{
+	"hdd_1":{"capacity":40000.00,
+			 "seekTime":1,
+			 "read"    :200.00,
+			 "write"   :100.00 },
+			 
+	"hdd_2":{"capacity":6666.00,
+			 "read"    :777.00,
+			 "seekTime":1,
+			 "write"   :333.00 }
+}

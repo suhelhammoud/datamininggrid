@@ -1,0 +1,1 @@
+{"machine_01":{"hostName":null,"baudRate":400.0,"virtualMemory":200.0,"hardDisk":{"seekTime":1.0,"read":200.0,"write":100.0,"capacity":40000.0},"cpu":{"cores":1,"speed":500.0}},"machine_02":{"hostName":null,"baudRate":55.0,"virtualMemory":44.0,"hardDisk":{"seekTime":1.0,"read":233.0,"write":99.0,"capacity":50000.0},"cpu":{"cores":2,"speed":500.0}}}

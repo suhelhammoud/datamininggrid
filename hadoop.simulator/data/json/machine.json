@@ -1,0 +1,49 @@
+{
+	"machine_01":{
+		
+		"cpu":{
+		"speed":500.0,
+		"cores":1 
+		},
+		
+		"hardDisk":{"capacity":40000.00,
+			 "seekTime":1,
+			 "read"    :200.00,
+			 "write"   :100.00 },
+			 
+		"baudRate":400.0,
+		"virtualMemory":200.0,
+		
+		"maxMapper":4,
+		"maxReducer":2,
+		
+		"mapperVirtualMemory":50,
+		"reducerVirtualMemory":50
+		
+		
+	},
+	
+	"machine_02":{
+		
+		"cpu":{
+		"speed":500.0,
+		"cores":2 
+		},
+		
+		"hardDisk":{"capacity":50000.00,
+			 "seekTime":1,
+			 "read"    :233.00,
+			 "write"   :99.00 },
+			 
+		"baudRate":55.0,
+		"virtualMemory":44.0,
+		
+			
+		"maxMapper":4,
+		"maxReducer":2,
+		
+		"mapperVirtualMemory":50,
+		"reducerVirtualMemory":50
+		
+	}
+}

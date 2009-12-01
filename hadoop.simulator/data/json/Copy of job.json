@@ -1,0 +1,33 @@
+{
+	"jobName":"job_01",
+	
+	"numberOfMappers":11,
+	"numberOfReducers":3,
+	
+	"data":{"id":"data_00", "location":"m1", "size":1000.00,
+				 "records":1000.0, "replica":["m1"] },
+	
+	
+	
+	"inputSplits":[
+		{"id":"01", "location":"m1", "size":1000.00, "records":1000.0, "replica":["m1"]},
+		{"id":"02", "location":"m2", "size":1000.00, "records":1000.0},
+		{"id":"03", "location":"m3", "size":1000.00, "records":1000.0},
+		{"id":"04", "location":"m4", "size":1000.00, "records":1000.0},
+		{"id":"05", "location":"m5", "size":1000.00, "records":1000.0},
+		{"id":"06", "location":"m6", "size":1000.00, "records":1000.0},
+		{"id":"07", "location":"m7", "size":1000.00, "records":1000.0},
+		{"id":"08", "location":"m8", "size":1000.00, "records":1000.0},
+		{"id":"09", "location":"m9", "size":1000.00, "records":1000.0},
+		{"id":"10", "location":"m1", "size":1000.00, "records":1000.0},
+		{"id":"11", "location":"m2", "size":1000.00, "records":1000.0}],
+		
+	"outputSplits":[],
+	
+	"algorithm":"alg_01",
+	
+	"useCombiner":false,
+	
+	"useCompression":false
+
+}

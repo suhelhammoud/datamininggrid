@@ -1,0 +1,83 @@
+{ "machines" : [ { "baudRate" : 400.0,
+            "cpu" : { "cores" : 1,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 40000.0,
+                "read" : 200.0,
+                "seekTime" : 1.0,
+                "write" : 100.0
+              },
+            "hostName" : "m1",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 0,
+            "maxReducer" : 0,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 200.0
+          },
+          { "baudRate" : 400.0,
+            "cpu" : { "cores" : 1,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 40000.0,
+                "read" : 200.0,
+                "seekTime" : 1.0,
+                "write" : 100.0
+              },
+            "hostName" : "m2",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 0,
+            "maxReducer" : 0,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 200.0
+          },
+          { "baudRate" : 400.0,
+            "cpu" : { "cores" : 1,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 40000.0,
+                "read" : 200.0,
+                "seekTime" : 1.0,
+                "write" : 100.0
+              },
+            "hostName" : "m3",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 0,
+            "maxReducer" : 0,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 200.0
+          },
+          { "baudRate" : 400.0,
+            "cpu" : { "cores" : 1,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 40000.0,
+                "read" : 200.0,
+                "seekTime" : 1.0,
+                "write" : 100.0
+              },
+            "hostName" : "m4",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 0,
+            "maxReducer" : 0,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 200.0
+          },
+          { "baudRate" : 55.0,
+            "cpu" : { "cores" : 2,
+                "speed" : 500.0
+              },
+            "hardDisk" : { "capacity" : 50000.0,
+                "read" : 233.0,
+                "seekTime" : 1.0,
+                "write" : 99.0
+              },
+            "hostName" : "m5",
+            "mapperVirtualMemory" : 0.0,
+            "maxMapper" : 0,
+            "maxReducer" : 0,
+            "reducerVirtualMemory" : 0.0,
+            "virtualMemory" : 44.0
+          }
+        ],
+      "router" : "r_01"
+    }
